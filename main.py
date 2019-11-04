@@ -22,8 +22,6 @@ for i in range (1, number + 1):
     while k + 1 > 0:
         name = name
         n1 = name[:name.find(' ') + 1]
-        #if n1.isdigit():
-         #   debt = int(n1)
         name_all = name_all + n1
         name = name[name.find(' ') + 1:]
         k -= 1
@@ -34,14 +32,15 @@ for i in range (1, number + 1):
     debt = payment[::-1]
     payment = int(payment)
     debt = int(debt)
-    print(format(debt, "14.0f"), end='')
-    print('|', end='')
-    print(format(payment, "16.0f"), end='')
-    print('|', end='')
+    print(format(debt, "14.0f"), end = '')
+    print('|', end = '')
+    print(format(payment, "16.0f"), end = '')
+    print('|', end = '')
     balance_owed = debt - payment
-    print(format(balance_owed, "21.0f"), end='')
+    print(format(balance_owed, "21.0f"), end = '')
     print('|')
-
+    
+print('--------------------------------------------------------------------------')
 
     #debt = int(input('Введите долг: '))
     #while debt < 0:
@@ -55,4 +54,3 @@ for i in range (1, number + 1):
 
     #balance_owed = debt - payment
     #print('Остаток долга =', balance_owed)
-print('--------------------------------------------------------------------------')
