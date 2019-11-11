@@ -13,6 +13,7 @@ first_column = 19
 payment = 0
 
 number = registry.count('/')
+
 for i in range (1, number + 1):
     index = registry.find('/')
     name = registry[:index]
@@ -25,32 +26,23 @@ for i in range (1, number + 1):
         name_all = name_all + n1
         name = name[name.find(' ') + 1:]
         k -= 1
+        
     symbol = first_column - len(name_all)
     print(name_all + ' ' * symbol, end = '')
     print('|', end = '')
+    
     payment = str(ord(name_all[0]))
     debt = payment[::-1]
     payment = int(payment)
     debt = int(debt)
+    
     print(format(debt, "14.0f"), end = '')
     print('|', end = '')
     print(format(payment, "16.0f"), end = '')
     print('|', end = '')
+    
     balance_owed = debt - payment
     print(format(balance_owed, "21.0f"), end = '')
     print('|')
     
 print('--------------------------------------------------------------------------')
-
-    #debt = int(input('Введите долг: '))
-    #while debt < 0:
-     #   print('Ошибка. Число не может быть меньше нуля.')
-      #  debt = int(input('Введите долг: '))
-
-    #payment = int(input('Введите платеж: '))
-    #while payment < 0:
-     #   print('Ошибка. Число не может быть меньше нуля.')
-      #  payment = int(input('Введите платеж: '))
-
-    #balance_owed = debt - payment
-    #print('Остаток долга =', balance_owed)
